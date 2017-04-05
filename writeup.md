@@ -18,12 +18,59 @@ The goals / steps of this project are the following:
 [image2]: ./report/aug_14.png "Type 14: Stop"
 [image3]: ./report/aug_18.png "Type 18: General caution"
 [image4]: ./report/aug_26.png "Type 26: Traffic signals"
-[image5]: ./report/training_distribution.png "Augmented Distribution"
+[image5]: ./report/training_distribution_aug.png "Augmented Distribution"
 [image6]: ./report/8_before.png "Speed Limit (120km/h)"
 [image7]: ./report/10_before.png "No passing for vehicles over 3.5 metric tons"
 [image8]: ./report/8_after.png "Speed Limit (120km/h)"
 [image9]: ./report/10_after.png "No passing for vehicles over 3.5 metric tons"
 [image10]: ./report/test_image.png "Test Images"
+[image11]:	./report/no0.png "No. 1 "
+[image12]:	./report/no1.png "No. 2 "
+[image13]:	./report/no2.png "No. 3 "
+[image14]:	./report/no3.png "No. 4 "
+[image15]:	./report/no4.png "No. 5 "
+[image16]:	./report/no5.png "No. 6 "
+[image17]:	./report/no6.png "No. 7 "
+[image18]:	./report/no7.png "No. 8 "
+[image19]:	./report/no8.png "No. 9 "
+[image20]:	./report/no9.png "No. 10"
+[image21]:	./report/no10.png	 "No. 11"
+[image22]:	./report/no11.png	 "No. 12"
+[image23]:	./report/no12.png	 "No. 13"
+[image24]:	./report/no13.png	 "No. 14"
+[image25]:	./report/no14.png	 "No. 15"
+[image26]:	./report/no15.png	 "No. 16"
+[image27]:	./report/no16.png	 "No. 17"
+[image28]:	./report/no17.png	 "No. 18"
+[image29]:	./report/no18.png	 "No. 19"
+[image30]:	./report/no19.png	 "No. 20"
+[image31]:	./report/no20.png	 "No. 21"
+[image32]:	./report/no21.png	 "No. 22"
+[image33]:	./report/no22.png	 "No. 23"
+[image34]:	./report/no23.png	 "No. 24"
+[image35]:	./report/no24.png	 "No. 25"
+[image36]:	./report/no25.png	 "No. 26"
+[image37]:	./report/no26.png	 "No. 27"
+[image38]:	./report/no27.png	 "No. 28"
+[image39]:	./report/no28.png	 "No. 29"
+[image40]:	./report/no29.png	 "No. 30"
+[image41]:	./report/no30.png	 "No. 31"
+[image42]:	./report/no31.png	 "No. 32"
+[image43]:	./report/no32.png	 "No. 33"
+[image44]:	./report/no33.png	 "No. 34"
+[image45]:	./report/no34.png	 "No. 35"
+[image46]:	./report/no35.png	 "No. 36"
+[image47]:	./report/no36.png	 "No. 37"
+[image48]:	./report/no37.png	 "No. 38"
+[image49]:	./report/no38.png	 "No. 39"
+[image50]:	./report/no39.png	 "No. 40"
+[image51]:	./report/no40.png	 "No. 41"
+[image52]:	./report/no41.png	 "No. 42"
+[image53]:	./report/no42.png	 "No. 43"
+[image54]:	./report/no43.png	 "No. 44"
+[image55]:	./report/no44.png	 "No. 45"
+[image56]:	./report/no45.png	 "No. 46"
+[image57]:	./report/no46.png	 "No. 47"
 
 My project code could be download from [here](https://github.com/alexvonduar/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
 
@@ -319,7 +366,7 @@ I use 20 epochs with 128 batch size to train the model, and set the learning rat
 
 My final model results were:
 * validation set accuracy of 0.966
-* test set accuracy of 0.940
+* test set accuracy of 0.944
 
 If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
@@ -349,56 +396,100 @@ I think the 21th, 22th, 33th, 36th and 43th images are hard to identify because 
 
 The code for making predictions on my final model is located in the 9th, 10th and 11th cell of the Ipython notebook.
 
-The accuracy for the new images are 70%. Here are the results of the prediction:
+The accuracy for the new images is 76% which is much lower compared with test set 94%. Here are the results of the prediction:
 
-|Image  | Sign Type			        | Prediction1 | Prediction2 | Prediction3 | Prediction4 | Prediction5 |
-|:----:|:---------------------:|:-------------------------------------:|:-------------------------------------:|:-----------------------------:|:------------------------------:|:-------------------------------------:|
-|96822779.bmp|Double curve|Double curve 21.0618|Road work 12.4938|Right-of-way at the next intersection 10.8621|Wild animals crossing 5.07889|Keep right 3.15149|
-|5.bmp|Stop|Stop 33.3703|Bicycles crossing 4.27079|No vehicles 2.4282|Speed limit (30km/h) -0.213573|Speed limit (60km/h) -1.1572|
-|3.bmp|Speed limit (120km/h)|Speed limit (20km/h) 3.5835|Speed limit (30km/h) 2.82731|Keep left 2.29803|No vehicles 1.91148|Speed limit (70km/h) 0.884721|
-|688071187.bmp|Speed limit (60km/h)|Speed limit (60km/h) 29.7834|Speed limit (50km/h) 23.0325|Speed limit (80km/h) 11.0004|No vehicles 7.7941|Wild animals crossing -0.500433|
-|171590640.bmp|Beware of ice/snow|Right-of-way at the next intersection 16.3356|Double curve 4.27044|End of no passing by vehicles over 3.5 metric tons 4.23512|Roundabout mandatory 3.24299|Slippery road 0.577272|
-|689937191.bmp|No passing|No passing 15.9583|Dangerous curve to the left 11.2124|No vehicles 4.87325|No passing for vehicles over 3.5 metric tons 4.61441|Speed limit (80km/h) 3.56307|
-|2.bmp|Pedestrians|Right-of-way at the next intersection 10.5009|General caution 7.15797|Road work 6.727|Beware of ice/snow 6.68699|Dangerous curve to the right 5.04717|
-|142475664.bmp|General caution|General caution 57.1584|Right-of-way at the next intersection 19.4966|Traffic signals 15.9026|Stop 11.6353|Pedestrians 11.2965|
-|6367584752.bmp|Road narrows on the right|Road narrows on the right 35.6783|Bicycles crossing 14.3032|Beware of ice/snow 9.89587|Pedestrians 9.7827|Road work 6.96623|
-|459381359.bmp|No passing|No passing 53.5205|No passing for vehicles over 3.5 metric tons 19.1813|Vehicles over 3.5 metric tons prohibited 16.2193|No vehicles 15.9501|Speed limit (80km/h) 10.2206|
-|106352829.bmp|Wild animals crossing|Wild animals crossing 61.2059|Road work 15.2528|Slippery road 12.2539|Bumpy road 8.54251|Double curve 7.45202|
-|171209328.bmp|Stop|Stop 69.1038|Bicycles crossing 4.3732|No vehicles 2.30311|End of all speed and passing limits -2.97447|Turn right ahead -4.31351|
-|689937195.bmp|Priority road|Priority road 96.8575|End of all speed and passing limits 3.56698|Stop -8.16243|Right-of-way at the next intersection -12.3169|Double curve -17.0272|
-|469763319.bmp|Pedestrians|Pedestrians 21.5726|Right-of-way at the next intersection 14.7226|General caution 12.5558|Children crossing 8.6564|Dangerous curve to the left 3.64727|
-|465649993.bmp|Speed limit (60km/h)|Speed limit (50km/h) 22.161|Speed limit (30km/h) 8.90783|Speed limit (70km/h) 5.01321|Speed limit (80km/h) 4.73603|Speed limit (100km/h) 2.50556|
-|165186251.bmp|Beware of ice/snow|Beware of ice/snow 19.0871|Right-of-way at the next intersection 16.7961|Children crossing 3.55586|Slippery road 2.99843|Pedestrians 0.284532|
-|57452573.bmp|Yield|End of all speed and passing limits 21.7993|End of no passing 3.53088|Turn left ahead 0.958656|Roundabout mandatory -0.00919942|End of speed limit (80km/h) -0.0676789|
-|459381113.bmp|Speed limit (50km/h)|Speed limit (50km/h) 46.2037|Speed limit (30km/h) 22.7507|Speed limit (70km/h) 10.0719|No vehicles 5.19576|Speed limit (80km/h) 4.00983|
-|532364055.bmp|No passing|No passing 74.1457|Dangerous curve to the left 25.6292|No passing for vehicles over 3.5 metric tons 12.8222|No vehicles 10.7884|Ahead only 7.15245|
-|122911974.bmp|Priority road|Priority road 99.5719|Stop -5.34828|End of all speed and passing limits -7.65613|Bicycles crossing -8.63034|Right-of-way at the next intersection -16.375|
-|649124149.bmp|Speed limit (30km/h)|Speed limit (100km/h) 5.51376|Speed limit (30km/h) 3.45241|Speed limit (80km/h) 2.38077|Speed limit (50km/h) 1.75675|Speed limit (120km/h) 1.65891|
-|96150383.bmp|Speed limit (30km/h)|Speed limit (30km/h) 18.7706|Speed limit (20km/h) 13.8004|Speed limit (70km/h) 11.526|Speed limit (50km/h) 4.86421|Speed limit (80km/h) -0.159729|
-|678876687.bmp|Wild animals crossing|Slippery road 5.82849|Beware of ice/snow 5.74751|Right-of-way at the next intersection 5.21141|Double curve 4.74657|Dangerous curve to the left 2.47593|
-|646712504.bmp|Speed limit (50km/h)|Speed limit (50km/h) 26.11|Speed limit (30km/h) 10.5543|Speed limit (70km/h) 5.88813|Speed limit (80km/h) 4.72046|No vehicles 4.35316|
-|636758475.bmp|Road work|Road work 56.5726|Double curve 8.53689|Beware of ice/snow 6.28407|Dangerous curve to the right 4.20553|Wild animals crossing 1.29207|
-|469763309.bmp|Roundabout mandatory|Roundabout mandatory 43.384|End of speed limit (80km/h) 6.8977|Go straight or left 4.48019|Keep right 3.59518|Speed limit (30km/h) 3.2751|
-|1063528292.bmp|30 Beware of ice/snow|Right-of-way at the next intersection 9.07139|Children crossing 8.16718|Pedestrians 7.72035|Beware of ice/snow 7.00531|Dangerous curve to the right 5.48678|
-|139372530.bmp|Wild animals crossing|Wild animals crossing 18.9549|Bicycles crossing 7.42193|Double curve 6.84952|Speed limit (80km/h) 3.65153|Pedestrians 2.63037|
-|6.bmp|Yield|Yield 59.29|Speed limit (60km/h) 10.6353|No vehicles 2.66863|Speed limit (80km/h) 2.20909|No passing 0.533554|
-|122439599.bmp|Double curve|Double curve 53.3198|Wild animals crossing 16.5757|Speed limit (30km/h) 13.5758|limit (50km/h) 13.066|Speed limit (80km/h) 9.91273|
-|153951752.bmp|Speed limit (50km/h)|limit (50km/h) 65.4802|Speed limit (30km/h) 35.7761|Speed limit (70km/h) 20.9007|Speed limit (80km/h) 11.6028|No vehicles 9.13664|
-|125530335.bmp|General caution|General caution 24.247|Pedestrians 9.36503|Right-of-way at the next intersection 8.6905|Traffic signals 6.53023|Dangerous curve to the right 3.61672|
-|656334061.bmp|Speed limit (30km/h)|Road work 4.56561|Turn right ahead 4.40654|Bicycles crossing 2.98922|Stop 2.90751|Priority road 2.6728|
-|459381295.bmp|Children crossing|Children crossing 44.0761|Ahead only 13.2671|Dangerous curve to the left 7.76078|Bumpy road 6.77964|Pedestrians 5.63151|
-|4.bmp|Speed limit (120km/h)|Speed limit (20km/h) 15.6229|Speed limit (120km/h) 7.96967|Children crossing 6.08955|General caution 3.36528|Traffic signals 3.03788|
-|459380825.bmp|General caution|General caution 9.92734|Traffic signals 6.6202|Bumpy road 6.26291|Road narrows on the right 5.38707|Road work 5.11739|
-|97447859.bmp|Speed limit (30km/h)|limit (50km/h) 19.969|Speed limit (30km/h) 17.2441|Speed limit (70km/h) 9.62397|Keep left 6.41679|Speed limit (80km/h) 5.11086|
-|459381275.bmp|Right-of-way at the next intersection|Right-of-way at the next intersection 38.1386|Roundabout mandatory 7.92537|Beware of ice/snow 6.81134|General caution 1.39738|Double curve 0.674032|
-|1.bmp|Road work|Road work 18.4649|Beware of ice/snow 4.58333|Road narrows on the right 4.35626|Wild animals crossing 1.57189|Dangerous curve to the right 0.941434|
-|95909520.bmp|Road work|Road work 34.4235|limit (50km/h) 8.7344|Speed limit (80km/h) 6.20459|Speed limit (60km/h) 4.67218|Road narrows on the right 2.94636|
-|674491693.bmp|No entry|No entry 46.6839|No passing 10.9115|Slippery road 10.7555|Vehicles over 3.5 metric tons prohibited 8.23244|Dangerous curve to the left 2.81226|
-|1539517522.bmp|Double curve|Double curve 50.239|Right-of-way at the next intersection 34.4096|Road work 29.4411|Beware of ice/snow 28.5136|Wild animals crossing 10.1392|
-|548310403.bmp|Yield|Yield 20.6534|No vehicles 8.06621|Speed limit (60km/h) 3.1423|Ahead only 2.74613|No passing 2.56263|
-|607770600.bmp|Children crossing|Children crossing 89.7841|Ahead only 35.7093|Bicycles crossing 26.5204|Bumpy road 25.6216|Dangerous curve to the left 12.3576|
-|688963145.bmp|Speed limit (100km/h)|Speed limit (100km/h) 19.3733|Speed limit (80km/h) 12.6116|Speed limit (120km/h) 6.94796|Vehicles over 3.5 metric tons prohibited 3.94948|limit (50km/h) 1.05437|
-|142641434.bmp|Stop|Stop 26.7928|Bicycles crossing 4.09793|Road work 2.05886|No vehicles 0.254827|Turn right ahead -0.0894577|
-|155907900.bmp|Speed limit (70km/h)|General caution 9.56075|Stop 7.4923|Speed limit (20km/h) 4.93237|No vehicles 3.69894|Road work 3.53795|
+![alt text][image11]
 
-From the result above, we can see that this model have truble in distinct signs which have fine texture details, for example, "Right-of-way at the next intersection", some "Double Curve" and "Beware of ice/snow" are recognized as "Right-of-way at the next intersection", and when the image tilt too much, it's not so efficient too. Further more, I should add a RELU afer last full connected layer before softmax to avoid negative points.
+![alt text][image12]
+
+![alt text][image13]
+
+![alt text][image14]
+
+![alt text][image15]
+
+![alt text][image16]
+
+![alt text][image17]
+
+![alt text][image18]
+
+![alt text][image19]
+
+![alt text][image20]
+
+![alt text][image21]
+
+![alt text][image22]
+
+![alt text][image23]
+
+![alt text][image24]
+
+![alt text][image25]
+
+![alt text][image26]
+
+![alt text][image27]
+
+![alt text][image28]
+
+![alt text][image29]
+
+![alt text][image30]
+
+![alt text][image31]
+
+![alt text][image32]
+
+![alt text][image33]
+
+![alt text][image34]
+
+![alt text][image35]
+
+![alt text][image36]
+
+![alt text][image37]
+
+![alt text][image38]
+
+![alt text][image39]
+
+![alt text][image40]
+
+![alt text][image41]
+
+![alt text][image42]
+
+![alt text][image43]
+
+![alt text][image44]
+
+![alt text][image45]
+
+![alt text][image46]
+
+![alt text][image47]
+
+![alt text][image48]
+
+![alt text][image49]
+
+![alt text][image50]
+
+![alt text][image51]
+
+![alt text][image52]
+
+![alt text][image53]
+
+![alt text][image54]
+
+![alt text][image55]
+
+![alt text][image56]
+
+![alt text][image57]
+
+From the result above, we can see that this model have truble in distinct signs which have fine texture details and when the image tilt too much, it's not so efficient too.
